@@ -1,0 +1,141 @@
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: rgb(71, 30, 75);
+    background-size: cover; /* Mengisi seluruh layar */
+    background-position: center; /* Memusatkan GIF */
+    background-repeat: no-repeat; /* Jangan ulang GIF */
+    animation: fade-in 2s ease; /* Menambahkan efek fade-in */
+    overflow: hidden; /* Agar tidak ada scrollbar */
+}
+
+/* Animasi gradasi background */
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Container Styling */
+.container {
+    background: linear-gradient(135deg, #FFFFFF, #F5F5F5);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 90%;
+    max-width: 500px;
+    color: #333;
+}
+
+/* Heading Styling */
+.container h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #6C2A7E; /* Grape */
+}
+
+.container .description {
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* Input Group */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Input Styling */
+input {
+    padding: 12px;
+    width: 100%;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+input:focus {
+    border-color: #6C2A7E; /* Grape */
+    outline: none;
+    box-shadow: 0 6px 12px rgba(108, 42, 126, 0.3);
+}
+
+/* Button Styling */
+button {
+    padding: 12px 25px;
+    margin-top: 15px;
+    background: linear-gradient(135deg, #2E1F27, #6C2A7E); /* Raisin to Grape */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background: linear-gradient(135deg, #6C2A7E, #E6E6FA); /* Grape to Lavender */
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Result and Process Display */
+.result {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 22px;
+    color: #6C2A7E; /* Grape */
+    padding: 10px;
+    background: linear-gradient(135deg, #E6E6FA, #FFFFFF); /* Lavender to White */
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.process {
+    text-align: left;
+    margin-top: 20px;
+    background: linear-gradient(135deg, #F5F5F5, #E6E6FA); /* White to Lavender */
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: monospace;
+    font-size: 14px;
+    color: #555;
+    overflow-y: auto;
+    max-height: 200px;
+}
+
+/* Fade-In Animation */
+.fade-in-step {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeInStep 0.5s forwards ease-in-out;
+}
+
+@keyframes fadeInStep {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
